@@ -1,0 +1,21 @@
+ALGORITHM algorithm_name
+VAR
+    ch:string;
+    vow,esp,i:entier;
+BEGIN
+lire(ch)
+esp:=1;
+vow:=0;
+FOR i FROM 0 TO ch.length - 1   DO
+    if (ch(i)=" ") then
+    esp:=esp+1;
+    ELSE
+    if (ch(i) in ["a""e""i""o""u""y"])then
+    vow:=vow+1;
+    END_IF
+    END_IF
+END_FOR
+ecrire("nombre de mots :",esp)
+ecrire("nombre de voyelle :",vow)
+ecrire("longeur :",ch.length)
+END
